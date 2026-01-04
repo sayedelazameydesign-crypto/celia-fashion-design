@@ -1,16 +1,18 @@
-# أمر التشغيل
+# أمر التشغيل: نستخدم npx لضمان عمل الأدوات دون بناء معقد
 run = "npx concurrently \"npm run dev\" \"npm run server\""
 entrypoint = "index.tsx"
 
-# الحل الصحيح لخطأ السطر 8:
+# تعريف الوحدات كقائمة (حل مشكلة السطر 8)
 modules = ["nodejs-20"]
 
 [nix]
+# استخدم النسخة المستقرة الرسمية الحالية لضمان تحميل الحزم الجاهزة (Binary)
 channel = "stable-24_11"
 
 [deployment]
 run = ["npm", "run", "build"]
 
+# تعريف المنافذ بتنسيق القائمة الصحيح (حل مشكلة السطر 13)
 [[ports]]
 localPort = 3000
 externalPort = 80
