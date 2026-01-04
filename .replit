@@ -1,22 +1,16 @@
-# أمر التشغيل الرئيسي للمشروع
+# أمر التشغيل
 run = "npx concurrently \"npm run dev\" \"npm run server\""
-
-# ملف الدخول الرئيسي
 entrypoint = "index.tsx"
 
-# تحديد إصدار المحرك (Node.js 20)
-[modules]
+# الحل الصحيح لخطأ السطر 8:
 modules = ["nodejs-20"]
 
-# إعدادات بيئة Nix
 [nix]
 channel = "stable-24_11"
 
-# إعدادات النشر (Deployment)
 [deployment]
 run = ["npm", "run", "build"]
 
-# تعريف المنافذ (Ports) بتنسيق القائمة الصحيح [[ports]]
 [[ports]]
 localPort = 3000
 externalPort = 80
@@ -24,7 +18,3 @@ externalPort = 80
 [[ports]]
 localPort = 5000
 externalPort = 5000
-
-# إعدادات إضافية للتأكد من سلاسة العمل في Replit
-[languages.typescript]
-renderType = "html"
