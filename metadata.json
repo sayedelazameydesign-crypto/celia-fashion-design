@@ -1,0 +1,18 @@
+{
+  "name": "celia_fashion_design",
+  "display_name": "Celia Fashion Design",
+  "description": "High-end AI-powered fashion store with Global Import features and Vodafone Cash integration.",
+  "contact": {
+    "email": "sayedelazameydesign@gmail.com",
+    "whatsapp": "01126212452",
+    "phone": "01126212452"
+  },
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "business_model": {
+    "margin": "15%",
+    "payment_gateway": "Vodafone Cash",
+    "target_number": "01126212452"
+  }
+}
